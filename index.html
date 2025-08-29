@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan's Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #0f3460, #533483);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #fff
+                /*#ffd369*/
+            ;
+            animation: fadeInDown 1.2s ease;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.85;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #fff
+                /*#ffd369*/
+            ;
+            border-left: 5px solid #ffd369;
+            padding-left: 12px;
+        }
+
+        /* About */
+        .about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 12px;
+            color: #ff8c8c;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: #e94560;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #0a0a14;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-card img {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 40px 15px;
+            }
+
+            .project-card img {
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pavan Rami</h1>
+        <p>Passionate Developer | Web & App Builder | Tech Enthusiast</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm <strong>Pavan</strong> 👋, Passionate and motivated person with a keen interest in all areas of
+            technology, including software, web, and mobile application development. Curious and adaptable, with a
+            strong drive to explore emerging tools, learn continuously, and contribute innovative, user-focused
+            solutions. Dedicated to growing as a versatile developer while making a meaningful impact through
+            technology.
+        </p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>Python , JavaScript , C , C++, Java , HTML , CSS </p>
+            </div>
+            <div class="skill-card">
+                <h3>FrontEnd Development</h3>
+                <p> React , React Native, Expo , Next.js , Vite</p>
+            </div>
+            <div class="skill-card">
+                <h3>BackEnd Development</h3>
+                <p>Node.js , Express.js , Next.js, API</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data-Base</h3>
+                <p> MongoDB , SQL</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>Git, VS Code , Android Studio , Linux</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <a href="https://hire-artist-7omt.vercel.app/" target="_blank"
+                    style="text-decoration:none; color:inherit;">
+                    <img src="artist-land.PNG" alt="Chat App">
+                    <div class="project-content">
+                        <h3>Hire Artist</h3>
+                        <p>Developed a platform for musical artists to showcase their talent by creating and managing
+                            profiles with photos, videos, and editable details. Users can search and filter artists
+                            based on skills, making it easier to discover and connect with performers.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://chat-application-front-end-eight.vercel.app/" target="_blank"
+                    style="text-decoration:none; color:inherit;">
+                    <img src="chat.PNG" alt="Music Artist Platform">
+                    <div class="project-content">
+                        <h3>Web-Based Chat Application!</h3>
+                        <p>Built a web communication platform with room‑based chat functionality, allowing users to
+                            create
+                            and join rooms for real‑time interaction. Designed for simplicity, smooth performance, and
+                            user‑friendly communication.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://pavanrami001.github.io/Pavan-App/" target="_blank"
+                    style="text-decoration:none; color:inherit;">
+                    <img src="PavanApp.PNG" alt="Gym Website">
+                    <div class="project-content">
+                        <h3>E‑Commerce Mobile Application</h3>
+                        <p>Developed a mobile e-commerce app that lets shop owners register their stores, manage
+                            products,
+                            and track orders with location details. Customers can browse and filter nearby shops,
+                            ensuring
+                            easy management for owners and convenient access for users.</p>
+                    </div>
+            </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" style="padding:60px 20px; max-width:1100px; margin:auto; text-align:center;">
+        <h2>
+            Contact
+        </h2>
+        <p style="font-size:1.1rem; color:#e0e0e0; line-height:1.8;">
+            📧 Email:
+            <a href="mailto:ramipavan001@gmail.com" style="color:#60a5fa; text-decoration:none; transition:color 0.3s;"
+                onmouseover="this.style.color='#ffd369'" onmouseout="this.style.color='#60a5fa'">
+                ramipavan001@gmail.com
+            </a>
+            <br><br>
+            🔗 GitHub:
+            <a href="https://github.com/PAVANRAMI001" target="_blank"
+                style="color:#60a5fa; text-decoration:none; transition:color 0.3s;"
+                onmouseover="this.style.color='#ffd369'" onmouseout="this.style.color='#60a5fa'">
+                github.com/PAVANRAMI001
+            </a>
+        </p>
+    </section>
+
+
+    <footer>
+        <p>© 2025 Pavan Rami | Built with ❤️ and passion</p>
+    </footer>
+</body>
+
+</html>
